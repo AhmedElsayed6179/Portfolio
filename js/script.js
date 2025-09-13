@@ -197,5 +197,6 @@ window.addEventListener("load", () => {
     setTimeout(() => {
       preloader.style.display = "none";
     }, 500);
-  }, 1000);
+  }, 500);
 });
+
