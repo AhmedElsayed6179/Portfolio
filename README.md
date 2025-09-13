@@ -28,7 +28,7 @@ This is an interactive CV portfolio website for Me. The site is designed to show
 
 ## Author
 
-**Ahmed Elsayed** – Fullstack Developer & Designer  
+**Ahmed Elsayed** – Frontend Developer
 [LinkedIn](https://www.linkedin.com/in/ahmed-elsayed-2085a7322/) | [GitHub](https://github.com/AhmedElsayed6179)
 
 ---
