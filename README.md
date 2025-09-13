@@ -1,6 +1,6 @@
-# Ahmed Elsayed - CV Portfolio Website
+# CV Portfolio Website
 
-This is an interactive CV portfolio website for Ahmed Elsayed. The site is designed to showcase a professional resume, skills, and portfolio in a modern, responsive interface.
+This is an interactive CV portfolio website for Me. The site is designed to showcase a professional resume, skills, and portfolio in a modern, responsive interface.
 
 ---
 
