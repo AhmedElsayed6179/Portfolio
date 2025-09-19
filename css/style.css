@@ -615,6 +615,12 @@ footer {
     color: var(--gray);
 }
 
+.copyright a {
+    text-decoration: none;
+    color: var(--gray);
+    position: relative;
+}
+
 .copyright a::after {
     content: "";
     position: absolute;
@@ -885,3 +891,4 @@ footer {
     }
 
 }
+
