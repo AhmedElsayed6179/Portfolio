@@ -200,3 +200,11 @@ window.addEventListener("load", () => {
   }, 500);
 });
 
+// SendError
+const SendBtn = document.getElementById("SendBtn");
+const SendError = document.getElementById("SendError");
+SendBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    SendError.textContent = "Network error, try again later";
+    SendError.style.display = "block";
+});;
