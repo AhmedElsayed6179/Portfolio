@@ -428,7 +428,7 @@ nav a:hover::after {
     color: var(--primary-light);
 }
 
-/* Our Services */
+/* My Services */
 
 .testimonials-grid {
     display: grid;
@@ -901,4 +901,5 @@ footer {
     }
 
 }
+
 
