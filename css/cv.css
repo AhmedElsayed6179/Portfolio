@@ -416,6 +416,7 @@ footer {
 }
 
 /* ---------- Background Wrapper ---------- */
+/* ---------- Background Wrapper ---------- */
 .bg-wrapper {
     position: fixed;
     top: 0;
@@ -433,7 +434,7 @@ footer {
     width: 100%;
     height: 100%;
     background: var(--darker);
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .bg-pattern {
@@ -465,56 +466,16 @@ footer {
     animation: drift 15s linear infinite;
 }
 
-.bg-shape-1 {
-    width: 100px;
-    height: 100px;
-    top: 20%;
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.bg-shape-2 {
-    width: 150px;
-    height: 150px;
-    top: 60%;
-    right: 20%;
-    animation-delay: 5s;
-    background: var(--light);
-}
-
-.bg-shape-3 {
-    width: 80px;
-    height: 80px;
-    bottom: 20%;
-    left: 30%;
-    animation-delay: 10s;
-}
+.bg-shape-1 { width: 100px; height: 100px; top: 20%; left: 10%; animation-delay: 0s; }
+.bg-shape-2 { width: 150px; height: 150px; top: 60%; right: 20%; animation-delay: 5s; background: var(--primary); }
+.bg-shape-3 { width: 80px; height: 80px; bottom: 20%; left: 30%; animation-delay: 10s; }
 
 @keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0px) rotate(0deg);
-    }
-
-    50% {
-        transform: translateY(-20px) rotate(180deg);
-    }
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
 }
 
 @keyframes drift {
-    0% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-
-    100% {
-        transform: translate(100px, -100px) rotate(360deg);
-    }
+    0% { transform: translate(0,0) rotate(0deg); }
+    100% { transform: translate(100px,-100px) rotate(360deg); }
 }
-
-
-
-
-
-
-
