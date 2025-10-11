@@ -6,6 +6,7 @@
     --darker: #0F111A;
     --light: #F0F4F8;
     --gray: #9AAABF;
+    --gradient: linear-gradient(135deg, #4A90E2 0%, #306ABF 100%);
 }
 
 /* ---------- Start Global Rules ---------- */
@@ -510,5 +511,6 @@ footer {
         transform: translate(100px, -100px) rotate(360deg);
     }
 }
+
 
 
