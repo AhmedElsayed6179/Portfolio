@@ -6,12 +6,6 @@
     --darker: #0F111A;
     --light: #F0F4F8;
     --gray: #9AAABF;
-    --background-dark: #000;
-    --text-light: #fff;
-    --text-dark: #fff;
-    --shadow-light: rgba(127, 191, 255, 0.2);
-    --shadow-dark: rgba(0, 0, 0, 0.5);
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ---------- Start Global Rules ---------- */
@@ -484,7 +478,7 @@ footer {
     top: 60%;
     right: 20%;
     animation-delay: 5s;
-    background: var(--text-light);
+    background: var(--light);
 }
 
 .bg-shape-3 {
@@ -516,4 +510,5 @@ footer {
         transform: translate(100px, -100px) rotate(360deg);
     }
 }
+
 
