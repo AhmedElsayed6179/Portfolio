@@ -6,14 +6,12 @@
     --darker: #0F111A;
     --light: #F0F4F8;
     --gray: #9AAABF;
-    --gradient: linear-gradient(135deg, #4A90E2 0%, #306ABF 100%);
     --background-dark: #000;
     --text-light: #fff;
     --text-dark: #fff;
     --shadow-light: rgba(127, 191, 255, 0.2);
     --shadow-dark: rgba(0, 0, 0, 0.5);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
 }
 
 /* ---------- Start Global Rules ---------- */
@@ -439,7 +437,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--background-dark) 0%, #1a202c 50%, var(--background-dark) 100%);
+    background: linear-gradient(135deg, var(--darker) 0%, #1a202c 50%, var(--darker) 100%);
     opacity: 0.8;
 }
 
@@ -518,3 +516,4 @@ footer {
         transform: translate(100px, -100px) rotate(360deg);
     }
 }
+
