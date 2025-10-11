@@ -432,7 +432,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--gradient);
+    background: var(--darker);
     opacity: 0.8;
 }
 
@@ -511,6 +511,7 @@ footer {
         transform: translate(100px, -100px) rotate(360deg);
     }
 }
+
 
 
 
