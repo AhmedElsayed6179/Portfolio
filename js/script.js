@@ -203,8 +203,27 @@ window.addEventListener("load", () => {
 // SendError
 const SendBtn = document.getElementById("SendBtn");
 const SendError = document.getElementById("SendError");
+
+// كل الحقول المطلوبة
+const inputs = document.querySelectorAll("input[required], textarea[required]");
+
 SendBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    SendError.textContent = "Network error, try again later";
-    SendError.style.display = "block";
-});;
+
+    let allFilled = true;
+    inputs.forEach(input => {
+        if (!input.value.trim()) {
+            allFilled = false;
+        }
+    });
+
+    if (!allFilled) {
+        SendError.textContent = "Please fill in all fields before sending.";
+        SendError.style.display = "block";
+    } else {
+        SendError.textContent = "Network error, try again later";
+        SendError.style.display = "block";
+    }
+});
+
+
