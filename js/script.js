@@ -4,6 +4,9 @@ AOS.init({
   once: true,
 });
 
+// CopyRight Year
+document.getElementById("year").textContent = new Date().getFullYear();
+
 // Mobile menu toggle
 const menuBtn = document.querySelector(".mobile-menu-btn");
 const navLinks = document.querySelector(".nav-links");
@@ -225,5 +228,6 @@ SendBtn.addEventListener("click", (e) => {
         SendError.style.display = "block";
     }
 });
+
 
 
