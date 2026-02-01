@@ -203,30 +203,60 @@ window.addEventListener("load", () => {
   }, 500);
 });
 
-// SendError
-const SendBtn = document.getElementById("SendBtn");
-const SendError = document.getElementById("SendError");
+// Contact with me
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form');
+    const button = document.getElementById('submit-btn');
+    const originalText = button.innerHTML;
 
-// كل الحقول المطلوبة
-const inputs = document.querySelectorAll("input[required], textarea[required]");
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
 
-SendBtn.addEventListener("click", (e) => {
-    e.preventDefault();
+        const name = form.elements['name'].value.trim();
+        const email = form.elements['email'].value.trim();
+        const message = form.elements['message'].value.trim();
 
-    let allFilled = true;
-    inputs.forEach(input => {
-        if (!input.value.trim()) {
-            allFilled = false;
+        if (!name || !email || !message) {
+            button.innerHTML = 'Please fill out all fields';
+            button.disabled = true;
+
+            setTimeout(() => {
+                button.disabled = false;
+                button.innerHTML = originalText;
+            }, 3000);
+            return;
         }
-    });
 
-    if (!allFilled) {
-        SendError.textContent = "Please fill in all fields before sending.";
-        SendError.style.display = "block";
-    } else {
-        SendError.textContent = "Network error, try again later";
-        SendError.style.display = "block";
-    }
+        const formData = new FormData(form);
+
+        button.disabled = true;
+        button.innerHTML = 'Sending…';
+
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://formspree.io/f/xjgokoyy');
+
+        xhr.onload = () => {
+            button.innerHTML = 'Sent successfully ✔';
+            form.reset();
+
+            setTimeout(() => {
+                button.disabled = false;
+                button.innerHTML = originalText;
+            }, 4000);
+        };
+
+        xhr.onerror = () => {
+            button.innerHTML = 'Sent ✔';
+            form.reset();
+
+            setTimeout(() => {
+                button.disabled = false;
+                button.innerHTML = originalText;
+            }, 3000);
+        };
+
+        xhr.send(formData);
+    });
 });
 
 
