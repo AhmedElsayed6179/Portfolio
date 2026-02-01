@@ -535,6 +535,10 @@ nav a:hover::after {
 
 .form-group {
     margin-bottom: 1.5rem;
+}
+
+.form-group textarea {
+    margin-bottom: 1.5rem;
     resize: none;
 }
 
@@ -885,6 +889,7 @@ footer {
     }
 
 }
+
 
 
 
