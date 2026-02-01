@@ -206,7 +206,7 @@ window.addEventListener("load", () => {
 // Contact with me
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contact-form');
-    const button = document.getElementById('submit-btn');
+    const button = document.getElementById('SendBtn');
     const originalText = button.innerHTML;
 
     form.addEventListener('submit', (e) => {
@@ -258,6 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
         xhr.send(formData);
     });
 });
+
 
 
 
