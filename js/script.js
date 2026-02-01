@@ -236,8 +236,13 @@ document.addEventListener('DOMContentLoaded', () => {
         xhr.open('POST', 'https://formspree.io/f/xjgokoyy');
 
         xhr.onload = () => {
-            button.innerHTML = 'Sent successfully ✔';
-            form.reset();
+            if (xhr.status >= 200 && xhr.status < 300) {
+                button.innerHTML = 'Sent successfully ✔';
+                form.reset();
+            } 
+            else {
+                button.innerHTML = 'Failed to send ✖';
+            }
 
             setTimeout(() => {
                 button.disabled = false;
@@ -246,19 +251,14 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         xhr.onerror = () => {
-            button.innerHTML = 'Sent ✔';
-            form.reset();
+            button.innerHTML = 'Network error ✖';
 
             setTimeout(() => {
                 button.disabled = false;
                 button.innerHTML = originalText;
-            }, 3000);
+            }, 4000);
         };
 
         xhr.send(formData);
     });
 });
-
-
-
-
