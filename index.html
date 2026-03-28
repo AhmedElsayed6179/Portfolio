@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ahmed's Portfolio</title>
+    <!-- Open Graph Meta Tags for social media sharing -->
+    <meta property="og:title" content="Portfolio" /> <!-- The title shown when shared on social platforms -->
+    <meta property="og:description"
+        content="This is an interactive CV portfolio website for Me. The site is designed to showcase a professional resume, skills, and portfolio in a modern, responsive interface." />
+    <!-- Description shown on social platforms -->
+    <meta property="og:image"
+        content="https://github.com/AhmedElsayed6179/Portfolio/blob/2aab90914b476137b67f3779fb0f649147a2c3c8/asset/ahmed.jpg" />
+    <!-- Image used when sharing the page -->
+    <meta property="og:type" content="website" /> <!-- Type of content -->
+    <meta property="og:url" content="https://ahmedelsayed6179.github.io/Portfolio/" /> <!-- URL of the website -->
+    <!-- Font Awesome Icons Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="asset/professional-portfolio.png" type="image/x-icon" />
+    <!-- AOS Library for Scroll Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Main Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- Particles background -->
+    <div id="particles-js" class="particles"></div>
+    <!-- Background Wrapper: contains all background layers -->
+    <div class="bg-wrapper">
+        <div class="bg-gradient"></div>
+        <div class="bg-pattern"></div>
+        <div class="bg-shapes">
+            <div class="bg-shape bg-shape-1"></div>
+            <div class="bg-shape bg-shape-2"></div>
+            <div class="bg-shape bg-shape-3"></div>
+        </div>
+    </div>
+    <!-- NavBar -->
+    <nav>
+        <div class="nav-logo">
+            <a href="index.html">Ahmed <span style="color: #fff;">Mohamed</span></a>
+        </div>
+        <div class="nav-links">
+            <a href="#home"><i class="fas fa-home"></i> Home</a>
+            <a href="#about"><i class="fas fa-user"></i> About</a>
+            <a href="cv.html"><i class="fas fa-file-pdf"></i> Resume</a>
+            <a href="#skills"><i class="fas fa-laptop-code"></i> Skills</a>
+            <a href="#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a>
+            <a href="https://ahmedelsayed6179.github.io/Ahmed-Websites/" target="_blank"><i class="fas fa-envelope"></i>
+                Contact</a>
+            <a href="https://github.com/AhmedElsayed6179" target="_blank" class="github-btn">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+    <!-- Header - Hero -->
+    <header id="home" class="hero">
+        <div class="hero-content" data-aos="fade-right">
+            <h1>Hi, I'm <span>Ahmed Mohamed</span></h1>
+            <div class="typewriter" id="typewriter"></div>
+            <p>Frontend Developer & PHP Backend Developer with a passion for creating beautiful and functional digital
+                experiences.</p>
+            <div class="btn-group">
+                <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                <a href="#portfolio" class="btn btn-outline">View My Work</a>
+            </div>
+        </div>
+        <img src="asset/ahmed.jpg" alt="Ahmed Elsayed" class="profile-pic" data-aos="fade-left">
+    </header>
+    <!-- About Us -->
+    <section id="about">
+        <h2 data-aos="fade-right">About Me</h2>
+        <div class="about-content">
+            <div class="about-text" data-aos="fade-right">
+                <p>I am a passionate Frontend Developer with a strong interest in building responsive, user-friendly,
+                    and functional websites. My journey in tech began with curiosity about how digital experiences are
+                    created, and it has since evolved into a deep passion for developing meaningful solutions.</p>
+
+                <p>What sets me apart is my ability to adapt quickly to new technologies and environments. I thrive in
+                    collaborative settings and believe that great products are built through teamwork, creativity, and
+                    diverse perspectives.</p>
+
+                <p>My ultimate goal is to grow into a skilled <strong>Full Stack Developer</strong>, capable of handling
+                    both frontend and backend development. Beyond coding, I value communication, problem-solving, and
+                    continuous learning, always seeking challenges that push me out of my comfort zone and help me grow
+                    professionally.</p>
+                <div class="btn-group" style="margin-top: 2rem;">
+                    <a href="cv.html" target="_blank" class="btn btn-primary">View Resume / CV</a>
+                    <a href="#skills" class="btn btn-outline">My Skills</a>
+                </div>
+            </div>
+            <div class="about-illustration" data-aos="fade-left">
+                <img src="asset/ai.png" alt="Web Development Illustration">
+            </div>
+        </div>
+    </section>
+    <!-- Skills -->
+    <section id="skills">
+        <h2 data-aos="fade-right">My Skills</h2>
+
+        <div class="skills-container">
+            <div class="skill-box" data-aos="fade-up" data-aos-delay="100">
+                <i class="fab fa-html5"></i>
+                <h3>HTML5</h3>
+                <p>Semantic markup, accessibility</p>
+            </div>
+
+            <div class="skill-box" data-aos="fade-up" data-aos-delay="200">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS3</h3>
+                <p>Flexbox Grid Animations</p>
+            </div>
+
+            <div class="skill-box" data-aos="fade-up" data-aos-delay="300">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+                <p>ES6+ DOM manipulation</p>
+            </div>
+
+            <div class="skill-box" data-aos="fade-up" data-aos-delay="700">
+                <i class="fas fa-laptop-code"></i>
+                <h3>TypeScript</h3>
+                <p>Strongly typed JavaScript for scalable apps</p>
+            </div>
+
+            <div class="skill-box" data-aos="fade-up" data-aos-delay="1000">
+                <i class="fab fa-react"></i>
+                <h3>React</h3>
+                <p>Building dynamic and interactive UIs</p>
+
+            </div>
+
+            <div class="skill-box" data-aos="fade-up" data-aos-delay="500">
+                <i class="fab fa-angular"></i>
+                <h3>Angular</h3>
+                <p>Structured Web Applications Development</p>
+            </div>
+
+            <div class="skill-box" data-aos="fade-up" data-aos-delay="400">
+                <i class="fa-brands fa-php"></i>
+                <h3>PHP</h3>
+                <p>Backend development</p>
+            </div>
+
+            <div class="skill-box" data-aos="fade-up" data-aos-delay="600">
+                <i class="fas fa-database"></i>
+                <h3>Sql</h3>
+                <p>Database</p>
+            </div>
+
+            <div class="skill-box" data-aos="fade-up" data-aos-delay="800">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Learning</h3>
+                <p>Visual Hierarchy & Typography</p>
+            </div>
+
+            <div class="skill-box" data-aos="fade-up" data-aos-delay="900">
+                <i class="fas fa-users"></i>
+                <h3>Teamwork</h3>
+                <p>Collaboration Communication</p>
+
+            </div>
+
+            <div class="skill-box" data-aos="fade-up" data-aos-delay="1100">
+                <i class="fab fa-git-alt"></i>
+                <h3>Git</h3>
+                <p>Version Control & Collaboration</p>
+            </div>
+
+            <div class="skill-box" data-aos="fade-up" data-aos-delay="1200">
+                <i class="fa-brands fa-github"></i>
+                <h3>GitHub</h3>
+                <p>Repo Management</p>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio -->
+    <section id="portfolio">
+        <h2 data-aos="fade-right">My Last Projects</h2>
+        <div class="portfolio-grid" id="portfolio-grid">
+
+            <!-- === Visible Projects (always shown) === -->
+            <div class="project-card" data-aos="fade-up">
+                <div class="project-badge">Featured</div>
+                <img src="asset/SayHello.png" alt="SayHello" class="project-image">
+                <div class="project-info">
+                    <h3>SayHello</h3>
+                    <p>Real-time chat platform built with Angular delivering a responsive and interactive user
+                        experience. Users can start chatting instantly by entering a name and can use voice recording
+                        and emoji integration.</p>
+                    <div class="project-tags">
+                        <span class="tag">Angular</span>
+                        <span class="tag">RxJS</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Socket.IO</span>
+                        <span class="tag">Bootstrap</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://sayhello.up.railway.app" target="_blank"><i
+                                class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/AhmedElsayed6179/sayhello" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-badge">Featured</div>
+                <img src="asset/Trainova.png" alt="Trainova" class="project-image">
+                <div class="project-info">
+                    <h3>Trainova</h3>
+                    <p>Your ultimate fitness companion. Track workouts, build custom training plans, and crush your
+                        goals — whether you're just starting out or a seasoned athlete.</p>
+                    <div class="project-tags">
+                        <span class="tag">Angular</span>
+                        <span class="tag">RxJS</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">Bootstrap</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://trainova.up.railway.app" target="_blank" rel="noopener noreferrer"><i
+                                class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/AhmedElsayed6179/Trainova" target="_blank"><i
+                                class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-badge">Featured</div>
+                <img src="asset/MarketHub.png" alt="MarketHub" class="project-image">
+                <div class="project-info">
+                    <h3>MarketHub</h3>
+                    <p>An Angular-based marketplace powered by RESTful APIs, offering a secure shopping experience with
+                        personalized authentication and seamless product management.</p>
+                    <div class="project-tags">
+                        <span class="tag">Angular</span>
+                        <span class="tag">RxJS</span>
+                        <span class="tag">REST APIs</span>
+                        <span class="tag">Bootstrap</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://markethub.up.railway.app" target="_blank" rel="noopener noreferrer"><i
+                                class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/AhmedElsayed6179/MarketHub" target="_blank"><i
+                                class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="asset/Coffee_Cups.png" alt="Coffee Cups" class="project-image">
+                <div class="project-info">
+                    <h3>Coffee Cups</h3>
+                    <p>Discover the perfect blend of taste and ambiance at Coffee Cups. Explore our curated coffee
+                        selections, vibrant gallery, and connect with us for a personalized coffee experience.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">PHP</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://coffee-cups.page.gd/" target="_blank" rel="noopener noreferrer"><i
+                                class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/AhmedElsayed6179/coffee-cups-pro" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                <img src="asset/Academy_System.png" alt="Academy System" class="project-image">
+                <div class="project-info">
+                    <h3>Academy System</h3>
+                    <p>A web-based academic system that allows teachers to securely log in, manage student records, and
+                        perform add, edit, or delete operations through a user-friendly interface.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">PHP</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://academy-system.page.gd/" target="_blank" rel="noopener noreferrer"><i
+                                class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/AhmedElsayed6179/Academy-System" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                <img src="asset/CartApp.png" alt="Code Store" class="project-image">
+                <div class="project-info">
+                    <h3>CartApp</h3>
+                    <p>This is a React-based web application that fetches product data from an API, dynamically displays
+                        a gallery of items, lets users add selected products to their shopping cart, and review their
+                        choices before checkout - with a clean, responsive Ul for easy browsing and shopping.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Redux</span>
+                        <span class="tag">Bootstrap</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://cart-app-pro.netlify.app" target="_blank" rel="noopener noreferrer"><i
+                                class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/AhmedElsayed6179/Cart-App" target="_blank"><i
+                                class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- === Hidden Projects (shown after clicking Show More) === -->
+            <div class="project-card hidden-project" data-aos="fade-up">
+                <img src="asset/Azkar.png" alt="Azkar" class="project-image">
+                <div class="project-info">
+                    <h3>Azkar</h3>
+                    <p>"Azkar" is a comprehensive platform designed to help users follow their daily Azkar
+                        (remembrances) in an organized and easy way. The website provides morning and evening Azkar, as
+                        well as Azkar for sleep, meals, and other occasions.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Vanilla JS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://ahmedelsayed6179.github.io/Azkar/" target="_blank" rel="noopener noreferrer"><i
+                                class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/AhmedElsayed6179/Azkar" target="_blank"><i
+                                class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card hidden-project" data-aos="fade-up" data-aos-delay="100">
+                <img src="asset/Agency.png" alt="AGENCY" class="project-image">
+                <div class="project-info">
+                    <h3>AGENCY</h3>
+                    <p>Professional marketing solutions to grow your business.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://ahmedelsayed6179.github.io/AGENCY/" target="_blank"
+                            rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/AhmedElsayed6179/AGENCY" target="_blank"><i
+                                class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card hidden-project" data-aos="fade-up" data-aos-delay="200">
+                <img src="asset/Cat_Store.png" alt="Cats Store" class="project-image">
+                <div class="project-info">
+                    <h3>Cats Store</h3>
+                    <p>Perfect Cat Store offering healthy and happy cats, tips for cat care, and an engaging photo
+                        gallery for cat lovers.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Vanilla JS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://ahmedelsayed6179.github.io/Cats-Store/" target="_blank"
+                            rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/AhmedElsayed6179/Cats-Store" target="_blank"><i
+                                class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card hidden-project" data-aos="fade-up" data-aos-delay="300">
+                <img src="asset/Mobile_Store.png" alt="Mobile Store" class="project-image">
+                <div class="project-info">
+                    <h3>Mobile Store</h3>
+                    <p>This website is a Mobile Store, offering a wide range of smartphones, accessories, and related
+                        tech products. Browse detailed product descriptions, compare features, and discover the latest
+                        innovations in mobile technology.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://ahmedelsayed6179.github.io/Mobile-Store/" target="_blank"
+                            rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/AhmedElsayed6179/Mobile-Store" target="_blank"><i
+                                class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card hidden-project" data-aos="fade-up" data-aos-delay="300">
+                <img src="asset/Level.png" alt="Mobile Store" class="project-image">
+                <div class="project-info">
+                    <h3>Level</h3>
+                    <p>Level is a modern travel and hotel booking website. It features a clean design that allows users
+                        to search for rooms, explore creative business services, and discover recommended travel
+                        destinations across the world like Europe, Asia, Africa, and America.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://ahmedelsayed6179.github.io/Level" target="_blank" rel="noopener noreferrer"><i
+                                class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/AhmedElsayed6179/Level" target="_blank"><i
+                                class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card hidden-project" data-aos="fade-up" data-aos-delay="300">
+                <img src="asset/realme.eg.png" alt="Mobile Store" class="project-image">
+                <div class="project-info">
+                    <h3>realme.eg</h3>
+                    <p>"Realme Egypt Mockup is a modern front-end e-commerce template designed to simulate the official
+                        Realme brand website. It features a responsive user interface showcasing smartphone models and
+                        accessories, complete with a Dark Mode toggle and bilingual (English/Arabic) support.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://ahmedelsayed6179.github.io/realme.eg" target="_blank"
+                            rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/AhmedElsayed6179/realme.eg" target="_blank"><i
+                                class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Show More / Show Less Button -->
+        <div class="portfolio-toggle" data-aos="fade-up">
+            <button id="toggleProjectsBtn" class="btn btn-toggle-projects">
+                <span id="toggleBtnText">Show More</span>
+                <i id="toggleBtnIcon" class="fas fa-chevron-down"></i>
+            </button>
+            <p class="projects-counter"><span id="visibleCount">6</span> of <span id="totalCount">10</span> projects</p>
+        </div>
+    </section>
+    <!-- Quote-card -->
+    <section>
+        <div class="quote-card" data-aos="zoom-in">
+            <p>"I believe that being adaptable is essential in the digital age. I embrace change, learn quickly, and see
+                AI as a collaborative tool to enhance human potential. By combining creativity with technology, we can
+                build meaningful solutions."</p>
+            <div class="author">— Ahmed Mohamed</div>
+        </div>
+    </section>
+    <!-- My Services -->
+    <section>
+        <h2 data-aos="fade-right">My Services</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card" data-aos="fade-up">
+                <div class="author-card" style="margin-bottom: 1rem;">
+                    <i class="fas fa-code" style="font-size:50px; color:#4A90E2;"></i>
+                </div>
+                <h4>Web Development</h4>
+                <p class="testimonial-text">I provide modern web development solutions to create fast and responsive
+                    websites.</p>
+            </div>
+
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="author-card" style="margin-bottom: 1rem;">
+                    <i class="fas fa-bolt" style="font-size:50px; color:#4A90E2;"></i>
+                </div>
+                <h4>Performance Optimization</h4>
+                <p class="testimonial-text">I enhance the speed and efficiency of applications for a smoother user
+                    experience.</p>
+            </div>
+
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="author-card" style="margin-bottom: 1rem;">
+                    <i class="fas fa-lightbulb" style="font-size:50px; color:#4A90E2;"></i>
+                </div>
+                <h4>Consulting</h4>
+                <p class="testimonial-text">I offer consulting services to help optimize your digital strategy.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Contact -->
+    <section id="contact">
+        <h2 data-aos="fade-right">Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info" data-aos="fade-right">
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>WhatsApp</h3>
+                        <a href="https://wa.me/qr/ZIGFPTFHFBYYM1">Send a Message</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Email</h3>
+                        <a href="mailto:ahmedelsayed6179@gmail.com" target="_blank" rel="noopener noreferrer">
+                            ahmedelsayed6179@gmail.com
+                        </a>
+                    </div>
+
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/AhmedElsayed6179" target="_blank">github.com/AhmedElsayed6179</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/ahmed-mohamed-27ba03219" target="_blank"
+                            rel="noopener noreferrer">
+                            linkedin.com/in/ahmed-mohamed</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Location</h3>
+                        <p>Alexandria, Egypt</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form" data-aos="fade-left">
+                <form id="contact-form" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" placeholder="email@example.com" id="email" class="form-control"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea style="resize: none;" id="message" rows="4" name="message"
+                            placeholder="Write your message here..." class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" id="SendBtn" class="btn btn-primary"><span>Send Message</span></button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://www.tiktok.com/@ahmed_el_sayed" class="social-link" target="_blank"
+                rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/ahmedelsayed25" class="social-link" target="_blank"
+                rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/ahmed-mohamed-27ba03219" class="social-link" target="_blank"
+                rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/AhmedElsayed6179" class="social-link" target="_blank"
+                rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            <a href="https://wa.me/qr/ZIGFPTFHFBYYM1" class="social-link" target="_blank" rel="noopener noreferrer"><i
+                    class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <p class="copyright">
+            © <span id="year"></span>
+            <a href="https://ahmedelsayed6179.github.io/Ahmed-Websites" target="_blank">
+                <b>Ahmed Mohamed.</b>
+            </a>
+            All rights reserved.
+        </p>
+    </footer>
+
+    <!-- AOS Library for Scroll Animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Particles.js Library for Background Particle Effects -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Main Custom JavaScript File -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

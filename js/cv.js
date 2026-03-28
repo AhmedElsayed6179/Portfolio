@@ -1,0 +1,138 @@
+// script.js
+AOS.init({
+  duration: 800,
+  once: true,
+});
+
+// CopyRight Year
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Mobile menu toggle
+const menuBtn = document.querySelector(".mobile-menu-btn");
+const navLinks = document.querySelector(".nav-links");
+
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  menuBtn.innerHTML = navLinks.classList.contains("active")
+    ? '<i class="fas fa-times"></i>'
+    : '<i class="fas fa-bars"></i>';
+});
+
+// Close mobile menu when clicking a link
+document.querySelectorAll(".nav-links a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+  });
+});
+
+// ========================= CV IMAGE SLIDER =========================
+(function () {
+  const track = document.getElementById("sliderTrack");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  const dots = document.querySelectorAll(".dot");
+  const currentPageEl = document.getElementById("currentPage");
+  const slides = document.querySelectorAll(".slide");
+  const total = slides.length;
+  let current = 0;
+
+  function goTo(index) {
+    current = (index + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle("active", i === current));
+    currentPageEl.textContent = current + 1;
+  }
+
+  prevBtn.addEventListener("click", () => goTo(current - 1));
+  nextBtn.addEventListener("click", () => goTo(current + 1));
+
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => goTo(parseInt(dot.dataset.index)));
+  });
+
+  // Touch/swipe support
+  let startX = 0;
+  track.addEventListener("touchstart", (e) => { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener("touchend", (e) => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
+  });
+
+  // Keyboard navigation
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") goTo(current - 1);
+    if (e.key === "ArrowRight") goTo(current + 1);
+  });
+})();
+
+// ========================= PARTICLES.JS INITIALIZATION =========================
+window.onload = function () {
+  particlesJS("particles-js", {
+    particles: {
+      number: {
+        value: 45,
+        density: { enable: true, value_area: 800 },
+      },
+      color: { value: "#F0F4F8" },
+      shape: {
+        type: "circle",
+        stroke: { width: 0, color: "#000000" },
+        polygon: { nb_sides: 5 },
+      },
+      opacity: { value: 0.8, random: false },
+      size: { value: 10, random: true },
+      line_linked: {
+        enable: true,
+        distance: 220,
+        color: "#F0F4F8",
+        opacity: 0.4,
+        width: 1.8,
+      },
+      move: {
+        enable: true,
+        speed: 2,
+        direction: "none",
+        out_mode: "out",
+      },
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: true, mode: "grab" },
+        onclick: { enable: true, mode: "push" },
+        resize: true,
+      },
+      modes: {
+        grab: { distance: 200, line_linked: { opacity: 1 } },
+        push: { particles_nb: 4 },
+      },
+    },
+    retina_detect: true,
+  });
+};
+
+const sections = document.querySelectorAll("section");
+
+function revealSections() {
+  const triggerBottom = window.innerHeight * 0.85;
+  sections.forEach((section) => {
+    const sectionTop = section.getBoundingClientRect().top;
+    if (sectionTop < triggerBottom) {
+      section.classList.add("visible");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealSections);
+window.addEventListener("load", revealSections);
+
+// Preloader hide after page load
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    const preloader = document.getElementById("preloader");
+    preloader.style.opacity = "0";
+    preloader.style.transition = "opacity 0.5s ease";
+    setTimeout(() => (preloader.style.display = "none"), 500);
+  }, 500);
+});
