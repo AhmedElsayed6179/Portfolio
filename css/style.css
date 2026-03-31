@@ -902,7 +902,11 @@ footer {
 
     header,
     section {
-        padding: 6.2rem 5%;
+        padding: 6rem 5%;
+    }
+
+    .hero {
+        margin-top: 20px;
     }
 }
 
