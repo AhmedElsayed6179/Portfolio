@@ -904,6 +904,10 @@ footer {
     section {
         padding: 6rem 5%;
     }
+
+    .hero {
+        margin-top: 20px;
+    }
 }
 
 @media (max-width: 576px) {

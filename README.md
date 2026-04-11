@@ -39,7 +39,7 @@ The core technologies utilized to build *this specific portfolio* include:
 Beyond this portfolio, my professional skill set as a Front-End Developer includes:
 
 * **Frameworks & Libraries:** Angular, RxJS
-* **Languages:** JavaScript, TypeScript, HTML, CSS/SCSS
+* **Languages:** TypeScript, HTML, CSS/SCSS
 * **State Management & Data:** Handling complex API integrations (RESTful APIs), BehaviorSubjects, and managing component lifecycles.
 * **Design Implementation:** Translating UI/UX designs into pixel-perfect, interactive web applications.
 
@@ -48,14 +48,22 @@ Beyond this portfolio, my professional skill set as a Front-End Developer includ
 ## 📂 Repository Structure
 
 ```text
-├── asset/          # Project images, screenshots, and CV files (PDF & JPGs)
-├── css/            # Stylesheets
-│   ├── cv.css      # Styles specific to the CV viewer
-│   └── style.css   # Main portfolio styles
-├── js/             # JavaScript logic
-│   ├── cv.js       # Logic for the interactive CV viewer
-│   └── script.js   # Main portfolio interactions and animations
-├── cv.html         # Interactive CV Viewer page
-├── index.html      # Main portfolio landing page
-└── README.md       # Project documentation
+src/
+├── index.html               (Syne + DM Sans fonts)
+├── styles.scss              (Global SASS variables & utilities)
+└── app/
+    ├── models/
+    │   └── portfolio.model.ts       (TypeScript interfaces)
+    ├── services/
+    │   └── portfolio-data.service.ts  (centralized)
+    └── components/
+        ├── preloader/     ✅
+        ├── navbar/        ✅ (responsive + scroll detection)
+        ├── hero/          ✅ (typewriter + floating cards + stats)
+        ├── about/         ✅ (highlights grid + visual card)
+        ├── skills/        ✅ (animated grid)
+        ├── portfolio/     🔄 (show more/less)
+        ├── services/      🔄
+        ├── contact/       🔄 (formspree integration)
+        └── footer/        🔄
 
